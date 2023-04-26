@@ -1,0 +1,47 @@
+{% load static tailwind_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="text-red-500">{%block title%}{%endblock%} | Hagan Whiskey</title>
+    {% tailwind_css %}
+</head>
+<body class="mx-32">
+    <nav class="bg-white "> 
+        <div class=" mx-auto">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <!--Website logo-->
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-rose-600 text-lg uppercase">Hagan Whiskey</span>
+                        </a>
+                    </div>
+                    <!--Primaary navbar items-->
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="" class="py-4 px-2 text-blue-500  font-small border-b-4 border-blue-500 font-semibold ">Home</a>
+                        <a href="" class="py-4 px-2 text-gray-500  font-small hover:text-blue-500 transition duration-300">Shop</a>
+                        <a href="" class="py-4 px-2 text-gray-500  font-small hover:text-blue-500 transition duration-300">Blog</a>
+                        <a href="" class="py-4 px-2 text-gray-500  font-small hover:text-blue-500 transition duration-300">About Us</a>
+                        <a href="" class="py-4 px-2 text-gray-500 font-small hover:text-blue-500 transition duration-300">Contact Us</a>
+                    </div>
+                   
+                </div>
+                 	<!-- Secondary Navbar items -->
+					<div class="hidden md:flex items-center space-x-3 ">
+						<a href="" class="py-2 px-2 font-small text-gray-500 hover:text-red-500 transition duration-300">Login</a>
+						<a href="" class="py-2 px-2 font-small text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">Sign Up</a>
+					</div>
+            </div>
+        </div>
+    </nav>
+    <div class="mt-10 ">
+       {% block content%}
+       {%endblock%}
+    </div>
+</body>
+</html>
